@@ -11,7 +11,15 @@ public class MyApplication {
         ArrayList<Person> people = new ArrayList<>();
         File employees = new File("/Users/alibekorazaly/IdeaProjects/assignment_2/src/sources/employees_data");
         File students = new File("/Users/alibekorazaly/IdeaProjects/assignment_2/src/sources/students_data");
-        Scanner sc = new Scanner(employees);
+        Scanner sc1 = new Scanner(employees);
+        Scanner sc2 = new Scanner(students);
+        while (sc1.hasNextLine()) {
+            people.add(new Person(sc1.nextLine(), sc2.nextLine()));
+        }
+        while (sc2.hasNextLine()) {
+            people.add(new Person(sc2.nextLine(), sc2.nextLine()));
+
+        }
         prindData(people);
     }
     public static void prindData(Iterable<Person> persons) {
