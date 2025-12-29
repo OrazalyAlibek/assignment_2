@@ -2,13 +2,16 @@ import models.Employee;
 import models.Person;
 import models.Student;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MyApplication {
     public static void main(String[] args) {
         ArrayList<Person> people = new ArrayList<>();
-        Scanner sc = new Scanner(File);
+        File employees = new File("/Users/alibekorazaly/IdeaProjects/assignment_2/src/sources/employees_data");
+        File students = new File("/Users/alibekorazaly/IdeaProjects/assignment_2/src/sources/students_data");
+        Scanner sc = new Scanner(employees);
         prindData(people);
     }
     public static void prindData(Iterable<Person> persons) {
