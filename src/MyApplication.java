@@ -14,10 +14,10 @@ public class MyApplication {
         Scanner sc1 = new Scanner(employees);
         Scanner sc2 = new Scanner(students);
         while (sc1.hasNextLine()) {
-            people.add(new Person(sc1.nextLine(), sc2.nextLine()));
+
         }
         while (sc2.hasNextLine()) {
-            people.add(new Person(sc2.nextLine(), sc2.nextLine()));
+
 
         }
         prindData(people);
