@@ -11,7 +11,6 @@ public class Person implements Payable, Comparable<Person> {
     public Person() {
         this.id = id_gen++;
     }
-
     public Person(String name, String surname) {
         this();
         setName(name);

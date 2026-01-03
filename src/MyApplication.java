@@ -27,6 +27,7 @@ public class MyApplication {
             double gpa = sc2.nextDouble();
             people.add(new Student(name, surname, gpa));
         }
+
         Collections.sort(people);
         printData(people);
 
