@@ -4,7 +4,6 @@ import models.Student;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class MyApplication {
@@ -15,24 +14,15 @@ public class MyApplication {
         Scanner sc1 = new Scanner(employees);
         Scanner sc2 = new Scanner(students);
         while (sc1.hasNextLine()) {
-            String name = sc1.next();
-            String surname = sc1.next();
-            String position = sc1.next();
-            double salary = sc1.nextDouble();
-            people.add(new Employee(name, surname, position, salary));
+            people.add(new Person(sc1.nextLine(), sc2.nextLine()));
         }
         while (sc2.hasNextLine()) {
-            String name = sc2.next();
-            String surname = sc2.next();
-            double gpa = sc2.nextDouble();
-            people.add(new Student(name, surname, gpa));
+            people.add(new Person(sc2.nextLine(), sc2.nextLine()));
+
         }
-
-        Collections.sort(people);
-        printData(people);
-
+        prindData(people);
     }
-    public static void printData(Iterable<Person> persons) {
+    public static void prindData(Iterable<Person> persons) {
         for (Person p : persons) {
             System.out.println(p.toString() + " earns " + p.getPaymentAmount() + " tenge ");
         }
