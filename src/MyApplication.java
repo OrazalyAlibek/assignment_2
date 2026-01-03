@@ -20,7 +20,7 @@ public class MyApplication {
             people.add(new Person(sc2.nextLine(), sc2.nextLine()));
 
         }
-         prindData(people);
+        prindData(people);
     }
     public static void prindData(Iterable<Person> persons) {
         for (Person p : persons) {
