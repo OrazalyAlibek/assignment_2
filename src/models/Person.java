@@ -34,10 +34,9 @@ public class Person implements Payable, Comparable<Person> {
     public String getPosition() {
         return "Student";
     }
-
     @Override
     public String toString() {
-        return id + " " + name + " " + surname;
+        return getPosition()+ " " + getId() + " " + getName() + " " + getSurname();
     }
     @Override
     public double getPaymentAmount() {
